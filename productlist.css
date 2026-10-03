@@ -1,0 +1,56 @@
+.list_button {
+  background-color: black;
+  color: aliceblue;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.list_button.selected {
+  background-color: gray;
+}
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  position: relative;
+}
+
+.product img {
+  width: 100%;
+  display: block;
+}
+
+.soldout_tag {
+  visibility: hidden;
+}
+
+.soldout * {
+  opacity: 50%;
+}
+
+.soldout .soldout_tag {
+  opacity: 100%;
+  visibility: visible;
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  top: 0;
+  left: 0;
+}
+
+.discount_tag {
+  font-size: larger;
+}
+
+em {
+  color: red;
+}
